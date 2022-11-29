@@ -1,11 +1,11 @@
 import ThemedLayout from "./layout";
-import EmailInput from "./pages/Entry/Entry";
+import Entry from "./pages/Entry";
 
 function App() {
   return (
     <div className="App ">
       <ThemedLayout>
-        <EmailInput />
+        <Entry/>
       </ThemedLayout>
     </div>
   );
