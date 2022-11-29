@@ -17,7 +17,9 @@ const ThemedLayout: React.FC<{ children: React.ReactNode }> = ({
           className="block tablet:hidden object-cover w-full -z-10"
         />
       </div>
-      <div className=" w-[100vw] h-[100vh] text-primary">{children}</div>
+      <div className=" w-[100vw] h-[100vh] text-primary relative">
+        {children}
+      </div>
       <div className="absolute bottom-0 w-full -z-10">
         <img
           src="/assets/theme-bottom-desktop.svg"

@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {},
-    },
-    screens: {
-      tablet: "800px",
+      screens: {
+        tablet: "900px",
+      },
     },
   },
   plugins: [],
