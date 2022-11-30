@@ -24,8 +24,9 @@ export const validatePhone =(phone:string)=>{
   return false;
 }
 
-const toastStyle = {
+export const toastStyle = {
   borderRadius: "10px",
   background: "#333",
   color: "#fff",
 };
+

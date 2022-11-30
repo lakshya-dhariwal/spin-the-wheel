@@ -16,3 +16,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.spinning {
+  transition: transform 5s;
+}
+.spin-0 {
+  transform: rotate(calc(5 * 360deg + (-360deg * 0)));
+}
+.spin-1 {
+  transform: rotate(calc(5 * 360deg + (-360deg * 1 / 6)));
+}
+.spin-2 {
+  transform: rotate(calc(5 * 360deg + (-360deg * 2 / 6)));
+}
+.spin-3 {
+  transform: rotate(calc(5 * 360deg + (-360deg * 3 / 6)));
+}
+.spin-4 {
+  transform: rotate(calc(5 * 360deg + (-360deg * 4 / 6)));
+}
+.spin-5 {
+  transform: rotate(calc(5 * 360deg + (-360deg * 5 / 6)));
+}

@@ -1,9 +1,11 @@
 import React from "react";
 import WheelLayout from "../../layout/Wheel";
 import { copyToClipboard } from "../../utils";
+import useStore from "../../store/index";
 
 function Result() {
   const COUPON_CODE = "XAXPDF20";
+  const won = useStore((state) => state.selected);
   return (
     <>
       <WheelLayout>
@@ -12,7 +14,7 @@ function Result() {
             Congrats! You Won:
           </h2>
           <h1 className="font-bold text-center text-4xl m-1 font leading-relaxed w-[300px]">
-            20% Off Coupon on Best Sellers
+            {won}
           </h1>
           <div className="flex font-bold  text-white justify-between my-4 rounded-lg bg-[#a2c3a4] bg-blur ">
             <h2 className="p-4 text-2xl ">{COUPON_CODE}</h2>
