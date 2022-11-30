@@ -1,6 +1,7 @@
 import BaseLayout from "./layout/Base";
 import Entry from "./pages/Entry";
 import Result from "./pages/Result";
+import Spin from "./pages/Spin";
 import { Toaster } from "react-hot-toast";
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
     <div className="App ">
       <Toaster />
       <BaseLayout>
-        <Result />
+        <Spin />
       </BaseLayout>
     </div>
   );
