@@ -1,8 +1,6 @@
 import React from "react";
 
-const ThemedLayout: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
+const BaseLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className="max-h-100vh">
       <div className="absolute top-0 w-full -z-10">
@@ -36,4 +34,4 @@ const ThemedLayout: React.FC<{ children: React.ReactNode }> = ({
   );
 };
 
-export default ThemedLayout;
+export default BaseLayout;
