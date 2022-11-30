@@ -1,9 +1,16 @@
+import { useState } from "react";
 import useStore from "../../store";
+import { validateEmail, validatePhone } from "../../utils";
 
 const Form = () => {
   const changePage = useStore((state) => state.changePage);
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const buttonHandler = () => {
-    changePage("spin");
+    console.log({ email, phone });
+    if (validateEmail(email) && validatePhone(phone)) {
+      changePage("spin");
+    }
   };
   return (
     <div className="flex justify-center  flex-col w-[450px]">
@@ -12,13 +19,19 @@ const Form = () => {
       </h1>
       <div className="bg-white flex mx-1 my-2 border-0 border-b-2 border-green-700">
         <img src="/assets/email.svg" alt="email" className="w-[20px] mx-3" />
-        <input type="text" placeholder="Email" className="w-full p-3" />
+        <input
+          type="text"
+          placeholder="Email"
+          onChange={(e) => setEmail(e.target.value)}
+          className="w-full p-3"
+        />
       </div>
       <div className="bg-white flex mx-1 my-2 border-0 border-b-2 border-green-700">
         <img src="/assets/phone.svg" alt="email" className="w-[20px] mx-3" />
         <input
           type="text"
           placeholder="Phone Number"
+          onChange={(e) => setPhone(e.target.value)}
           className="w-full p-3 placeholder-pl-5"
         />
       </div>
