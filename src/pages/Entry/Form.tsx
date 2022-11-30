@@ -13,7 +13,7 @@ const Form = () => {
     }
   };
   return (
-    <div className="flex justify-center  flex-col w-[450px]">
+    <div className="flex justify-center  flex-col sm:w-[450px]">
       <h1 className="font-bold text-3xl m-1 font leading-relaxed">
         This is how EngageBud looks like in action!
       </h1>
