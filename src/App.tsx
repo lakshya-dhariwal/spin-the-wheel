@@ -1,12 +1,15 @@
-import ThemedLayout from "./layout";
+import BaseLayout from "./layout/Base";
 import Entry from "./pages/Entry";
+import Result from "./pages/Result";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <div className="App ">
-      <ThemedLayout>
-        <Entry/>
-      </ThemedLayout>
+      <Toaster />
+      <BaseLayout>
+        <Result />
+      </BaseLayout>
     </div>
   );
 }
