@@ -1,4 +1,10 @@
+import useStore from "../../store";
+
 const Form = () => {
+  const changePage = useStore((state) => state.changePage);
+  const buttonHandler = () => {
+    changePage("spin");
+  };
   return (
     <div className="flex justify-center  flex-col w-[450px]">
       <h1 className="font-bold text-3xl m-1 font leading-relaxed">
@@ -23,7 +29,10 @@ const Form = () => {
           provided. Consent is not a condition to purchase.
         </h3>
       </div>
-      <button className="text-3xl bg-[#146531] text-white rounded-full p-5 font-black">
+      <button
+        onClick={buttonHandler}
+        className="text-3xl bg-[#146531] text-white rounded-full p-5 font-black"
+      >
         Try Your Luck
       </button>
       <p className="text-xs m-3  font-light">
