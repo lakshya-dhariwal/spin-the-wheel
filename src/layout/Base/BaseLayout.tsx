@@ -2,7 +2,7 @@ import React from "react";
 
 const BaseLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className="max-h-100vh">
+    <div className="max-h-100vh overflow-hidden">
       <div className="absolute top-0 w-full -z-10">
         <img
           src="/assets/theme-top-desktop.svg"
